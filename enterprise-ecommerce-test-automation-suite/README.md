@@ -63,6 +63,20 @@ Reports and Screenshots
 
 ---
 
+### Visual Architecture Diagram
+
+Feature File
+   ↓
+Step Definition
+   ↓
+Page Object
+   ↓
+Playwright Browser
+   ↓
+Assertion
+   ↓
+Report / Screenshot
+
 ## Project Structure
 
 features/
