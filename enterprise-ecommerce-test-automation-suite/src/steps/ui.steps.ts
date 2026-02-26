@@ -1,5 +1,5 @@
 import { Given, When, Then } from '@cucumber/cucumber';
-import { expect } from 'playwright';
+import { expect } from '@playwright/test';
 import { CustomWorld } from '../support/world';
 import { env } from '../config/env';
 import { LoginPage } from '../pages/LoginPage';

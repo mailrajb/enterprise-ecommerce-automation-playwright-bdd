@@ -1,5 +1,5 @@
 import { Given, Then } from '@cucumber/cucumber';
-import { expect } from 'playwright';
+import { expect } from '@playwright/test';
 import { ApiClient } from '../api/ApiClient';
 
 Given('I call the sample API endpoint {string}', async function (path: string) {

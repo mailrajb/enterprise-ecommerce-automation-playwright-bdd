@@ -1,0 +1,278 @@
+[
+  {
+    "description": "",
+    "elements": [
+      {
+        "description": "",
+        "id": "api-smoke-validation;sample-api-returns-ok",
+        "keyword": "Scenario",
+        "line": 2,
+        "name": "Sample API returns OK",
+        "steps": [
+          {
+            "keyword": "Before",
+            "hidden": true,
+            "result": {
+              "status": "passed",
+              "duration": 715213292
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "Given ",
+            "line": 3,
+            "name": "I call the sample API endpoint \"/posts/1\"",
+            "match": {
+              "location": "src/steps/api.steps.ts:5"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 65471332
+            },
+            "embeddings": [
+              {
+                "data": "ewogICJzdGF0dXMiOiAyMDAsCiAgImRhdGEiOiB7CiAgICAidXNlcklkIjogMSwKICAgICJpZCI6IDEsCiAgICAidGl0bGUiOiAic3VudCBhdXQgZmFjZXJlIHJlcGVsbGF0IHByb3ZpZGVudCBvY2NhZWNhdGkgZXhjZXB0dXJpIG9wdGlvIHJlcHJlaGVuZGVyaXQiLAogICAgImJvZHkiOiAicXVpYSBldCBzdXNjaXBpdFxuc3VzY2lwaXQgcmVjdXNhbmRhZSBjb25zZXF1dW50dXIgZXhwZWRpdGEgZXQgY3VtXG5yZXByZWhlbmRlcml0IG1vbGVzdGlhZSB1dCB1dCBxdWFzIHRvdGFtXG5ub3N0cnVtIHJlcnVtIGVzdCBhdXRlbSBzdW50IHJlbSBldmVuaWV0IGFyY2hpdGVjdG8iCiAgfQp9",
+                "mime_type": "application/json"
+              }
+            ]
+          },
+          {
+            "arguments": [],
+            "keyword": "Then ",
+            "line": 4,
+            "name": "the API response status should be 200",
+            "match": {
+              "location": "src/steps/api.steps.ts:14"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 1834415
+            }
+          },
+          {
+            "keyword": "After",
+            "hidden": true,
+            "result": {
+              "status": "passed",
+              "duration": 22282000
+            }
+          }
+        ],
+        "tags": [],
+        "type": "scenario"
+      }
+    ],
+    "id": "api-smoke-validation",
+    "line": 1,
+    "keyword": "Feature",
+    "name": "API smoke validation",
+    "tags": [],
+    "uri": "features/api/health.feature"
+  },
+  {
+    "description": "  As a shopper\n  I want to purchase an item\n  So that I can validate core purchase workflow end-to-end",
+    "elements": [
+      {
+        "description": "",
+        "id": "e-commerce-happy-path-checkout;user-logs-in,-adds-item-to-cart,-and-completes-checkout",
+        "keyword": "Scenario",
+        "line": 6,
+        "name": "User logs in, adds item to cart, and completes checkout",
+        "steps": [
+          {
+            "keyword": "Before",
+            "hidden": true,
+            "result": {
+              "status": "passed",
+              "duration": 124180791
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "Given ",
+            "line": 7,
+            "name": "I am on the login page",
+            "match": {
+              "location": "src/steps/ui.steps.ts:10"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 269891750
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "When ",
+            "line": 8,
+            "name": "I login with valid credentials",
+            "match": {
+              "location": "src/steps/ui.steps.ts:16"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 141443083
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "Then ",
+            "line": 9,
+            "name": "I should see the products page",
+            "match": {
+              "location": "src/steps/ui.steps.ts:26"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 7342666
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "When ",
+            "line": 10,
+            "name": "I add \"Sauce Labs Backpack\" to the cart",
+            "match": {
+              "location": "src/steps/ui.steps.ts:36"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 60342541
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "Then ",
+            "line": 11,
+            "name": "I should see \"Sauce Labs Backpack\" in the cart",
+            "match": {
+              "location": "src/steps/ui.steps.ts:43"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 2604417
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "When ",
+            "line": 12,
+            "name": "I complete checkout with customer info",
+            "match": {
+              "location": "src/steps/ui.steps.ts:48"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 114132583
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "Then ",
+            "line": 13,
+            "name": "I should see the order confirmation",
+            "match": {
+              "location": "src/steps/ui.steps.ts:57"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 2058791
+            }
+          },
+          {
+            "keyword": "After",
+            "hidden": true,
+            "result": {
+              "status": "passed",
+              "duration": 15596457
+            }
+          }
+        ],
+        "tags": [],
+        "type": "scenario"
+      }
+    ],
+    "id": "e-commerce-happy-path-checkout",
+    "line": 1,
+    "keyword": "Feature",
+    "name": "E-Commerce happy path checkout",
+    "tags": [],
+    "uri": "features/ui/ecommerce-flow.feature"
+  },
+  {
+    "description": "",
+    "elements": [
+      {
+        "description": "",
+        "id": "login-negative-validation;invalid-user-cannot-login",
+        "keyword": "Scenario",
+        "line": 2,
+        "name": "Invalid user cannot login",
+        "steps": [
+          {
+            "keyword": "Before",
+            "hidden": true,
+            "result": {
+              "status": "passed",
+              "duration": 125798208
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "Given ",
+            "line": 3,
+            "name": "I am on the login page",
+            "match": {
+              "location": "src/steps/ui.steps.ts:10"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 244897290
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "When ",
+            "line": 4,
+            "name": "I login with invalid credentials",
+            "match": {
+              "location": "src/steps/ui.steps.ts:21"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 82403708
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "Then ",
+            "line": 5,
+            "name": "I should see a login error",
+            "match": {
+              "location": "src/steps/ui.steps.ts:31"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 2266791
+            }
+          },
+          {
+            "keyword": "After",
+            "hidden": true,
+            "result": {
+              "status": "passed",
+              "duration": 10509125
+            }
+          }
+        ],
+        "tags": [],
+        "type": "scenario"
+      }
+    ],
+    "id": "login-negative-validation",
+    "line": 1,
+    "keyword": "Feature",
+    "name": "Login negative validation",
+    "tags": [],
+    "uri": "features/ui/login-negative.feature"
+  }
+]
